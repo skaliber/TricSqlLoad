@@ -1,0 +1,13 @@
+Feature: workshop
+In this suite will be covers all functional tests defined for workshop page as an worker/TeamLeader
+
+
+
+    @workshop
+    Scenario: Test workerUI as an worker
+    
+    Given Open wfm as an worker user in order to test workshop functionality
+    Then i will check workerUi page title
+    And I will check worker logged name
+    
+    

@@ -1,0 +1,17 @@
+package com.tvh.test.locators;
+public class WorkshopElements {
+
+	public static final String WorkerName="FILIP VAN UYTFANGE";
+	public static final String WorkerUIPageTitle="TVH - WFM - Workshop Page";
+	public static final String WorkerNameLabelByXpath="//ul[@id='breadcrumb']/h1/label";
+	public static final String NotProductiveTabByXpath="//a[contains(text(),'Not productive')]";
+	public static final String RecurrentTabByXpath="//a[contains(text(),'Recurrent')]";
+	public static final String HelpWorkerTabByXpath="//a[contains(text(),'Help worker')]";
+	public static final String OnHoldTabByXpath="//a[contains(text(),'On hold')]";
+	public static final String AvailableJobsByXpath="//a[contains(text(),'Scheduled')]";
+	public static final String RunningJobsabByXpath="//a[contains(text(),'Running jobs')]";
+	public static final String FinishedJobsTabByXpath="//a[contains(text(),'Finished jobs')]";
+	public static final String StartjobButtonByXpath="//a[@class='play-btn']";
+	
+	
+}

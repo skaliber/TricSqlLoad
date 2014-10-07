@@ -1,0 +1,38 @@
+package com.tvh.step.definition;
+
+import java.io.IOException;
+
+import com.tvh.test.driver.SharedDriver;
+import com.tvh.test.pages.Login;
+import com.tvh.test.pages.RandomizeNumber;
+import com.tvh.test.pages.ZonePageMap;
+import cucumber.api.java.en.Given;
+
+public class ZonePage extends ZonePageMap {
+
+	public ZonePage(SharedDriver webDriver){
+		super(webDriver);
+		
+	}
+	@Given("^Open wfm as an admin user in order to test zonePage functionality$")
+	public void Open_wfm_as_an_admin_user_in_order_to_test_zonePage_functionality() throws Throwable {
+	   
+		 Login.loginAsAdmin(webDriver);
+		
+	}
+	
+	
+	
+	
+	
+	{
+	
+	
+	try {
+		RandomizeNumber.WriteFile(RandomizeNumber.FileReader()+ 1);
+	} catch (IOException e) {
+		
+		e.printStackTrace();
+	}
+}
+}

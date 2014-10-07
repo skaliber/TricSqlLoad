@@ -1,0 +1,161 @@
+package com.tvh.step.definition;
+
+import java.io.IOException;
+import com.tvh.test.driver.SharedDriver;
+import com.tvh.test.pages.Login;
+import com.tvh.test.pages.RandomizeNumber;
+import com.tvh.test.pages.WorkshopManagementMap;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class WorkShop extends WorkshopManagementMap {
+
+	public WorkShop(SharedDriver webDriver){
+		super(webDriver);
+		
+	}
+	@Given("^Open wfm as an worker user in order to test workshop functionality$")
+	public void Open_wfm_as_an_worker_user_in_order_to_test_workshop_functionality() throws Throwable {
+	   
+	   Login.loginAsWorker(webDriver);
+	   
+	}
+	
+	@Then("^i will check workerUi page title$")
+	public void i_will_check_workerUi_page_title() throws Throwable {
+	   
+		getWorkerUiPageTitle();
+	}
+
+	@Then("^I will check worker logged name$")
+	public void I_will_check_worker_logged_name() throws Throwable {
+	
+		getWorkerName();
+
+	}
+	
+		@When("^i click on not productive tab$")
+		public void i_click_on_not_productive_tab() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^I should see the not productive operation in the list$")
+		public void I_should_see_the_not_productive_operation_in_the_list() throws Throwable {
+		   
+		    
+		}
+
+		@When("^I click on Play icon to start a not productive operation$")
+		public void I_click_on_Play_icon_to_start_a_not_productive_operation() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^Not productive operation shout be started$")
+		public void Not_productive_operation_shout_be_started() throws Throwable {
+		   
+		    
+		}
+
+		@When("^i click on add a comment button$")
+		public void i_click_on_add_a_comment_button() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^Add a comment modal window whould be opened$")
+		public void Add_a_comment_modal_window_whould_be_opened() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^I will Input a comment here and i will save it$")
+		public void I_will_Input_a_comment_here_and_i_will_save_it() throws Throwable {
+		   
+		    
+		}
+
+		@When("^I will go to recurrent tab$")
+		public void I_will_go_to_recurrent_tab() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^Recurrent operation should be displayed$")
+		public void Recurrent_operation_should_be_displayed() throws Throwable {
+		   
+		    
+		}
+
+		@When("^i will try to start a recurrent operation when a not productive operation is still running$")
+		public void i_will_try_to_start_a_recurrent_operation_when_a_not_productive_operation_is_still_running() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^Error message should be displayed$")
+		public void Error_message_should_be_displayed() throws Throwable {
+		   
+		    
+		}
+
+		@When("^i will go to Available jobs tab$")
+		public void i_will_go_to_Available_jobs_tab() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^jobs are displayed on jobs table$")
+		public void jobs_are_displayed_on_jobs_table() throws Throwable {
+		   
+		    
+		}
+
+		@When("^I will try to start a productive job and a not productive job is still running$")
+		public void I_will_try_to_start_a_productive_job_and_a_not_productive_job_is_still_running() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^An error message should be displayed$")
+		public void An_error_message_should_be_displayed() throws Throwable {
+		   
+		    
+		}
+
+		@When("^I will finish the current Not productive operation running$")
+		public void I_will_finish_the_current_Not_productive_operation_running() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^Job should not be displayed on running job table$")
+		public void Job_should_not_be_displayed_on_running_job_table() throws Throwable {
+		   
+		    
+		}
+
+		@When("^i click on finish Job tab in order to check if Not productive job was set executed$")
+		public void i_click_on_finish_Job_tab_in_order_to_check_if_Not_productive_job_was_set_executed() throws Throwable {
+		   
+		    
+		}
+
+		@Then("^Not productive operation should be displayed on Finished job panel$")
+		public void Not_productive_operation_should_be_displayed_on_Finished_job_panel() throws Throwable {
+		   
+		    
+		}
+
+		{
+		
+	try {
+		RandomizeNumber.WriteFile(RandomizeNumber.FileReader()+ 1);
+	} catch (IOException e) {
+		
+		e.printStackTrace();
+	}
+		}
+			}

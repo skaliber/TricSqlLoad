@@ -1,0 +1,10 @@
+package com.tvh.test.locators;
+
+public class WorkshopElements {
+
+	public static final String WorkerName="FILIP VAN UYTFANGE";
+	public static final String WorkerUIPageTitle="TVH - WFM - Workshop Page";
+	public static final String WorkerNameLabelByXpath="//ul[@id='breadcrumb']/h1/label";
+	
+	
+}

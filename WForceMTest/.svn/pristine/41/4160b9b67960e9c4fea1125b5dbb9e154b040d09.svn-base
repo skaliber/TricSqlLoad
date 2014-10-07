@@ -1,0 +1,28 @@
+package com.tvh.test.locators;
+public class WorkshopElements {
+
+	public static final String WorkerName="FILIP VAN UYTFANGE";
+	public static final String WorkerUIPageTitle="TVH - WFM - Workshop Page";
+	public static final String WorkerNameLabelByXpath="//ul[@id='breadcrumb']/h1/label";
+	public static final String NotProductiveTabByXpath="//a[contains(text(),'Not productive')]";
+	public static final String RecurrentTabByXpath="//a[contains(text(),'Recurrent')]";
+	public static final String HelpWorkerTabByXpath="//a[contains(text(),'Help worker')]";
+	public static final String OnHoldTabByXpath="//a[contains(text(),'On hold')]";
+	public static final String AvailableJobsByXpath="//a[contains(text(),'Scheduled')]";
+	public static final String RunningJobsabByXpath="//a[contains(text(),'Running jobs')]";
+	public static final String FinishedJobsTabByXpath="//a[contains(text(),'Finished jobs')]";
+	public static final String StartjobButtonByXpath="//a[@class='play-btn']";
+	public static final String OperationLocationFirstRowByXpath="//tr[2]/td[2]";
+	public static final String NotProductiveOperationDescription="borg";
+	public static final String Message5MinutesPopUpWindowByXpath="//form/div/div[2]/div/div/div";
+	public static final String YesButtonByName="warningMessageWindow:content:confirmForm:okButton";
+	public static final String OperationNameOnRunningJobPanelByXpath="//td[5]/span";
+	public static final String AddCommentButtonByXpath="//a[@class='addcomment-btn']";
+	public static final String AddCommentModalWindowByXpath="//h3[@class='w_captionText']";
+	public static final String AddCommentModalWindowValue="Add comment";
+	public static final String AddCommentTextButtonByName="commentArea";
+	public static final String CommentTextValue="Test Comment";
+	public static final String AddCommentSaveButton="saveButton";
+	
+	
+}

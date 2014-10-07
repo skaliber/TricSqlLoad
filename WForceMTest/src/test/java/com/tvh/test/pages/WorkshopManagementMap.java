@@ -1,0 +1,185 @@
+package com.tvh.test.pages;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.tvh.test.driver.SharedDriver;
+import com.tvh.test.locators.WorkshopElements;
+import com.tvh.test.pages.SeleniumWebdriver.Locators;
+public class WorkshopManagementMap {
+
+	public WebDriver webDriver;
+
+	public WebDriver getWebDriver() {
+		return webDriver;
+	}
+	
+	/*-- Actions For workerUi page --*/
+	
+	
+public WorkshopManagementMap getWorkerUiPageTitle()throws Exception{
+		
+	  assertEquals(WorkshopElements.WorkerUIPageTitle, webDriver.getTitle());
+	
+		return this;
+	}
+
+public WorkshopManagementMap getWorkerName()throws Exception{
+	
+	assertEquals(WorkshopElements.WorkerName, webDriver.findElement(By.xpath(WorkshopElements.WorkerNameLabelByXpath)).getText());
+	SeleniumWebdriver.wait(5);
+	
+		return this;
+	}
+	
+
+public WorkshopManagementMap GoToNotProductiveTab()throws Exception{
+	
+	WebDriverWait wait = new WebDriverWait(webDriver, 5);
+	
+	WebElement NotPrdocutive = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(WorkshopElements.NotProductiveTabByXpath)));
+	NotPrdocutive.click();
+	
+	return this;
+}
+	
+public WorkshopManagementMap CheckIfNPOperationIsDisplayed()throws Exception{
+	SeleniumWebdriver.wait(3);
+	
+		assertEquals(WorkshopElements.NotProductiveOperationDescriptionLowerCase, webDriver.findElement(
+				By.xpath(WorkshopElements.OperationLocationFirstRowByXpath)).getText());
+	
+	return this;
+}
+
+public WorkshopManagementMap StartAJobFromList()throws Exception{
+	
+	SeleniumWebdriver.click(Locators.xpath, WorkshopElements.StartjobButtonByXpath, webDriver);
+	
+	List<WebElement> buttonList = webDriver.findElements(By.name(WorkshopElements.YesButtonByName));
+	SeleniumWebdriver.wait(3);
+	
+	if (buttonList.size() != 0)
+	{
+		buttonList.get(0).click();
+	}
+	else 
+	{
+		SeleniumWebdriver.wait(3);
+		
+	}
+	
+	return this;
+}
+
+public WorkshopManagementMap WaitUntilPopUpMessageIsDisplayed()throws Exception{
+	
+	List<WebElement> buttonList = webDriver.findElements(By.name(WorkshopElements.YesButtonByName));
+	SeleniumWebdriver.wait(3);
+	
+	if (buttonList.size() != 0)
+	{
+		buttonList.get(0).click();
+	}
+	else 
+	{
+		SeleniumWebdriver.wait(3);
+		
+	}
+	
+	return this;
+}
+
+
+public WorkshopManagementMap clickonYesButtonToremoveGaps()throws Exception{
+	
+	SeleniumWebdriver.click(Locators.name, WorkshopElements.YesButtonByName, webDriver);
+	SeleniumWebdriver.wait(6);
+	return this;
+}
+
+public WorkshopManagementMap checkIfNPOperationIsStarted()throws Exception{
+	
+	assertEquals(WorkshopElements.NotProductiveOperationDescription, webDriver.findElement(By.xpath(WorkshopElements.OperationNameOnRunningJobPanelByXpath)).getText());
+	
+	return this;
+}
+
+public WorkshopManagementMap clickonAddCommentButton()throws Exception{
+	
+	SeleniumWebdriver.click(Locators.xpath, WorkshopElements.AddCommentButtonByXpath, webDriver);
+	SeleniumWebdriver.wait(3);
+	
+	return this;
+}
+
+public WorkshopManagementMap checkIfAddComentModalWindowIsOpened()throws Exception{
+	
+	assertEquals(WorkshopElements.AddCommentModalWindowValue, webDriver.findElement(
+			By.xpath(WorkshopElements.AddCommentModalWindowByXpath)).getText());
+	
+	return this;
+}
+
+
+public WorkshopManagementMap addAComment()throws Exception{
+	
+	SeleniumWebdriver.type(Locators.name, WorkshopElements.AddCommentTextButtonByName, WorkshopElements.CommentTextValue, webDriver);
+	
+	return this;
+}
+
+public WorkshopManagementMap SaveCommentAction()throws Exception{
+	
+	SeleniumWebdriver.submit(Locators.name, WorkshopElements.AddCommentSaveButton, webDriver);
+		SeleniumWebdriver.wait(2);
+	
+	
+	return this;
+}
+
+public WorkshopManagementMap gotoRecurrentTab() throws Exception{
+	SeleniumWebdriver.click(Locators.xpath, WorkshopElements.RecurrentTabByXpath, webDriver);
+	SeleniumWebdriver.wait(2);
+	
+	
+	return this;
+}
+
+public WorkshopManagementMap checkIfRecurrentOperationIsAvailable() throws Exception{
+	
+	
+	assertEquals(WorkshopElements.RecurrentOperationLowerCaseDescrition, webDriver.findElement(
+			By.xpath(WorkshopElements.OperationLocationFirstRowByXpath)).getText());
+	
+	
+	
+	return this;
+}
+
+
+
+
+
+
+public void setWebDriver(WebDriver webDriver) {
+		
+		this.webDriver = webDriver;
+		
+	}
+
+	public WorkshopManagementMap(SharedDriver webDriver){
+		
+		this.webDriver = webDriver;
+	
+	}
+	
+	
+}

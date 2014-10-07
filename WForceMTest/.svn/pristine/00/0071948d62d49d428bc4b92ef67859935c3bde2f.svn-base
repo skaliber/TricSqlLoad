@@ -1,0 +1,10 @@
+Feature: Zone page
+In this suite will be covers all functional tests defined for Zone page as an admin user
+
+
+
+    @zonePage
+    Scenario: Test Zone page as an admin
+    
+    Given Open wfm as an admin user in order to test zonePage functionality
+    
