@@ -33,6 +33,7 @@ public enum SeleniumDriver {
 				//System.setProperty("webdriver.chrome.driver", "C:\\work\\Projects\\Java\\Java_tools\\SeleniumDriver\\chrome\\chromedriver.exe");
 				System.setProperty("webdriver.chrome.driver", "D:\\TVH\\Tools\\chromedriver.exe");
 				driver = new ChromeDriver();
+				driver = new FirefoxDriver();
 				break;
 				
 			default:
